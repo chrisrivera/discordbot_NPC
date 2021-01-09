@@ -16,9 +16,11 @@ discordNPC bot
   * pm2 start NPCbot.js
   	* **note** this bot requires the discord account token to be stored in an auth.json file at the same level as the bot.
   	*example:*
+  				```javascript
   				{
 					"token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 				}
+				```
   
 # Resources:
   * [discord.js](https://discord.js.org/#/docs/main/stable/general/welcome)
