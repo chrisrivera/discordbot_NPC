@@ -88,10 +88,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 message: "``Hey "+user+" need something?\n"+replies[random]+"``"
             });
      }
-});
-bot.on('message', function (user, userID, channelID, message, evt) {
+	 
 	// Execute joke on the following command
-	if (message.toLowerCase().startsWith("joke"){
+	else if (message.toLowerCase().startsWith("joke"){
 		
 		bot.sendMessage({
 			to: channelID,
