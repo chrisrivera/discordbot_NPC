@@ -91,7 +91,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
 	// Execute joke on the following command
-	if (message.toLowerCase(). startsWith("joke"){
+	if (message.toLowerCase().startsWith("joke"){
 		
 		bot.sendMessage({
 			to: channelID,
