@@ -78,21 +78,23 @@ bot.on('ready', function (evt) {
 });
 
 bot.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    if (message.toLowerCase().startsWith("hey") || 
-        message.toLowerCase().startsWith("hello") || 
-        message.toLowerCase().startsWith("hi")) {        
-            bot.sendMessage({
-                to: channelID,
-                message: "```Hey "+user+" need something?\n"+replies[mrandom]+"```"
-            });
-        mrandom = Math.floor(Math.random() * replies.length);
-     }
-	else if (message.toLowerCase().includes("joke")){
-            bot.sendMessage({
-                to: channelID,
-                message: "```Hey "+user+" Here's a joke I heard when I visited Daggerfall!\n"+jokes[jrandom]+"```"
-            });
-            jrandom = Math.floor(Math.random() * jokes.length);
-	}
+    if (user != "NPC"){
+        // Our bot needs to know if it will execute a command
+        if (message.toLowerCase().startsWith("hey") || 
+            message.toLowerCase().startsWith("hello") || 
+            message.toLowerCase().startsWith("hi")) {        
+                bot.sendMessage({
+                    to: channelID,
+                    message: "```Hey "+user+" need something?\n"+replies[mrandom]+"```"
+                });
+            mrandom = Math.floor(Math.random() * replies.length);
+         }
+    	else if (message.toLowerCase().includes("joke")){
+                bot.sendMessage({
+                    to: channelID,
+                    message: "```Hey "+user+" Here's a joke I heard when I visited Daggerfall!\n"+jokes[jrandom]+"```"
+                });
+                jrandom = Math.floor(Math.random() * jokes.length);
+    	}
+    }
 });
